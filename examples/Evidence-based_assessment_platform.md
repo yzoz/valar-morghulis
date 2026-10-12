@@ -166,7 +166,6 @@ flowchart TB
     S01["<a href="#s01">S01 API Gateway / BFF<br/>JWT · rate-limit · tenant routing</a>"]:::edge
 
     subgraph DOMAIN["Ядро домена (system of record)"]
-      direction LR
       S03["<a href="#s03">S03 Tenant & Org<br/>тенанты / орг</a>"]:::core
       S04["<a href="#s04">S04 Engagement<br/>заявки</a>"]:::core
       S06["<a href="#s06">S06 Object Registry<br/>объекты</a>"]:::core
@@ -177,7 +176,6 @@ flowchart TB
     end
 
     subgraph CALC["Вычисления / контроль"]
-      direction LR
       S16["<a href="#s16">S16 Calculation Core<br/>Rust, gRPC</a>"]:::calc
       S17["<a href="#s17">S17 QA / Autoexpertise<br/>автоэкспертиза</a>"]:::calc
       S11["<a href="#s11">S11 Market Data<br/>рыночные данные</a>"]:::calc
@@ -188,7 +186,6 @@ flowchart TB
     end
 
     subgraph AICV["ИИ / CV / Интеграции"]
-      direction LR
       S18["<a href="#s18">S18 CV Inspection<br/>CV-анализ фото</a>"]:::ai
       S19["<a href="#s19">S19 Document Recognition<br/>OCR документов</a>"]:::ai
       S20["<a href="#s20">S20 AI Expert Orchestrator<br/>ИИ-оркестратор</a>"]:::ai
@@ -200,7 +197,6 @@ flowchart TB
     end
 
     subgraph COMMON["Общие сервисы"]
-      direction LR
       S02["<a href="#s02">S02 IAM / Identity</a>"]:::common
       S05["<a href="#s05">S05 Workflow / Process</a>"]:::common
       S14["<a href="#s14">S14 Audit Log<br/>hash-chain</a>"]:::common
@@ -213,23 +209,16 @@ flowchart TB
     end
 
     subgraph DATA["Хранилища и шина"]
-      direction TB
       STORE["Хранилища: PostgreSQL (+PostGIS, pgvector) · MongoDB · ClickHouse · InfluxDB · Redis/Valkey · MinIO/S3 · OpenSearch · Vector DB"]:::store
       BUS["Шина: RabbitMQ (tasks/events) + append-only журнал событий (Kafka/Streams)"]:::store
     end
 
     C --> S01
     S01 --> DOMAIN
-    S01 --> CALC
-    S01 --> AICV
-    S01 --> COMMON
-    DOMAIN --> STORE
-    CALC --> STORE
-    AICV --> STORE
+    DOMAIN --> CALC
+    CALC --> AICV
+    AICV --> COMMON
     COMMON --> STORE
-    DOMAIN --> BUS
-    CALC --> BUS
-    AICV --> BUS
     COMMON --> BUS
 
 ```
