@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 1220" width="1260" height="1220" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+<defs><linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f6f8fc"/></linearGradient><filter id="soft" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#243b6b" flood-opacity="0.12"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7b879e"/></marker></defs>
+<rect x="6.0" y="6.0" width="1248.0" height="1208.0" rx="20" fill="url(#card)" stroke="#e3e8f0" stroke-width="1.5" />
+<text x="44.0" y="52.0" font-size="26" fill="#1f2937" font-weight="700" text-anchor="start" >Целевая топология</text>
+<text x="44.0" y="78.0" font-size="13" fill="#6b7280" font-weight="400" text-anchor="start" >Клиенты → шлюз → контуры сервисов → данные/шина (fan-out / fan-in)</text>
+<rect x="320.0" y="104.0" width="620.0" height="48.0" rx="11" fill="#e8eefc" stroke="#5b7bb4" stroke-width="1.6" filter="url(#soft)"/>
+<text x="630.0" y="134.0" font-size="13" fill="#1b2a44" font-weight="600" text-anchor="middle" >Клиенты: React SPA · PWA осмотра (offline) · внешние API-клиенты</text>
+<rect x="450.0" y="176.0" width="360.0" height="58.0" rx="11" fill="#fde8e8" stroke="#c0504d" stroke-width="1.7" filter="url(#soft)"/>
+<text x="630.0" y="201.0" font-size="14" fill="#5a1a1a" font-weight="700" text-anchor="middle" >S01  API Gateway / BFF</text>
+<text x="630.0" y="219.0" font-size="10.5" fill="#8a3434" font-weight="400" text-anchor="middle" >JWT · rate-limit · tenant routing</text>
+<line x1="630.0" y1="152.0" x2="630.0" y2="175.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40.0" y="322.0" width="278.0" height="672.0" rx="15" fill="#eef8ef" stroke="#4f9e57" stroke-width="1.7" filter="url(#soft)"/>
+<circle cx="60" cy="344" r="5" fill="#4f9e57"/>
+<text x="73.0" y="349.0" font-size="14" fill="#4f9e57" font-weight="700" text-anchor="start" >Ядро домена</text>
+<text x="73.0" y="364.0" font-size="10" fill="#4f9e57" font-weight="400" text-anchor="start" >(system of record)</text>
+<line x1="54" y1="374" x2="304" y2="374" stroke="#4f9e57" stroke-width="1" opacity="0.28"/>
+<rect x="58.0" y="442.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#4f9e57" stroke-width="1.2" />
+<rect x="67.0" y="454.0" width="3.6" height="34" rx="1.8" fill="#4f9e57"/>
+<text x="79.0" y="466.0" font-size="13.5" fill="#4f9e57" font-weight="700" text-anchor="start" >S03</text>
+<text x="79.0" y="485.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Tenant &amp; Org</text>
+<text x="79.0" y="497.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >тенанты / орг</text>
+<rect x="58.0" y="510.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#4f9e57" stroke-width="1.2" />
+<rect x="67.0" y="522.0" width="3.6" height="34" rx="1.8" fill="#4f9e57"/>
+<text x="79.0" y="534.0" font-size="13.5" fill="#4f9e57" font-weight="700" text-anchor="start" >S04</text>
+<text x="79.0" y="553.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Engagement</text>
+<text x="79.0" y="565.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >заявки</text>
+<rect x="58.0" y="578.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#4f9e57" stroke-width="1.2" />
+<rect x="67.0" y="590.0" width="3.6" height="34" rx="1.8" fill="#4f9e57"/>
+<text x="79.0" y="602.0" font-size="13.5" fill="#4f9e57" font-weight="700" text-anchor="start" >S06</text>
+<text x="79.0" y="621.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Object Registry</text>
+<text x="79.0" y="633.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >объекты</text>
+<rect x="58.0" y="646.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#4f9e57" stroke-width="1.2" />
+<rect x="67.0" y="658.0" width="3.6" height="34" rx="1.8" fill="#4f9e57"/>
+<text x="79.0" y="670.0" font-size="13.5" fill="#4f9e57" font-weight="700" text-anchor="start" >S07</text>
+<text x="79.0" y="689.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Methodology Reg.</text>
+<text x="79.0" y="701.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >методики</text>
+<rect x="58.0" y="714.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#4f9e57" stroke-width="1.2" />
+<rect x="67.0" y="726.0" width="3.6" height="34" rx="1.8" fill="#4f9e57"/>
+<text x="79.0" y="738.0" font-size="13.5" fill="#4f9e57" font-weight="700" text-anchor="start" >S08</text>
+<text x="79.0" y="757.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >References / Normative</text>
+<text x="79.0" y="769.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >справочники</text>
+<rect x="58.0" y="782.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#4f9e57" stroke-width="1.2" />
+<rect x="67.0" y="794.0" width="3.6" height="34" rx="1.8" fill="#4f9e57"/>
+<text x="79.0" y="806.0" font-size="13.5" fill="#4f9e57" font-weight="700" text-anchor="start" >S09</text>
+<text x="79.0" y="825.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Commission</text>
+<text x="79.0" y="837.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >комиссия</text>
+<rect x="58.0" y="850.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#4f9e57" stroke-width="1.2" />
+<rect x="67.0" y="862.0" width="3.6" height="34" rx="1.8" fill="#4f9e57"/>
+<text x="79.0" y="874.0" font-size="13.5" fill="#4f9e57" font-weight="700" text-anchor="start" >S10</text>
+<text x="79.0" y="893.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >DTP Cases</text>
+<text x="79.0" y="905.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >ДТП</text>
+<rect x="340.0" y="322.0" width="278.0" height="672.0" rx="15" fill="#eef0fc" stroke="#5b5bc0" stroke-width="1.7" filter="url(#soft)"/>
+<circle cx="360" cy="344" r="5" fill="#5b5bc0"/>
+<text x="373.0" y="349.0" font-size="14" fill="#5b5bc0" font-weight="700" text-anchor="start" >Вычисления / контроль</text>
+<line x1="354" y1="374" x2="604" y2="374" stroke="#5b5bc0" stroke-width="1" opacity="0.28"/>
+<rect x="358.0" y="442.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#5b5bc0" stroke-width="1.2" />
+<rect x="367.0" y="454.0" width="3.6" height="34" rx="1.8" fill="#5b5bc0"/>
+<text x="379.0" y="466.0" font-size="13.5" fill="#5b5bc0" font-weight="700" text-anchor="start" >S16</text>
+<text x="379.0" y="485.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Calculation Core</text>
+<text x="379.0" y="497.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >Rust, gRPC</text>
+<rect x="358.0" y="510.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#5b5bc0" stroke-width="1.2" />
+<rect x="367.0" y="522.0" width="3.6" height="34" rx="1.8" fill="#5b5bc0"/>
+<text x="379.0" y="534.0" font-size="13.5" fill="#5b5bc0" font-weight="700" text-anchor="start" >S17</text>
+<text x="379.0" y="553.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >QA / Autoexpertise</text>
+<text x="379.0" y="565.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >автоэкспертиза</text>
+<rect x="358.0" y="578.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#5b5bc0" stroke-width="1.2" />
+<rect x="367.0" y="590.0" width="3.6" height="34" rx="1.8" fill="#5b5bc0"/>
+<text x="379.0" y="602.0" font-size="13.5" fill="#5b5bc0" font-weight="700" text-anchor="start" >S11</text>
+<text x="379.0" y="621.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Market Data</text>
+<text x="379.0" y="633.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >рыночные данные</text>
+<rect x="358.0" y="646.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#5b5bc0" stroke-width="1.2" />
+<rect x="367.0" y="658.0" width="3.6" height="34" rx="1.8" fill="#5b5bc0"/>
+<text x="379.0" y="670.0" font-size="13.5" fill="#5b5bc0" font-weight="700" text-anchor="start" >S12</text>
+<text x="379.0" y="689.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Source Archive</text>
+<text x="379.0" y="701.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >WORM</text>
+<rect x="358.0" y="714.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#5b5bc0" stroke-width="1.2" />
+<rect x="367.0" y="726.0" width="3.6" height="34" rx="1.8" fill="#5b5bc0"/>
+<text x="379.0" y="738.0" font-size="13.5" fill="#5b5bc0" font-weight="700" text-anchor="start" >S13</text>
+<text x="379.0" y="757.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Provenance</text>
+<text x="379.0" y="769.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >доказательства</text>
+<rect x="358.0" y="782.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#5b5bc0" stroke-width="1.2" />
+<rect x="367.0" y="794.0" width="3.6" height="34" rx="1.8" fill="#5b5bc0"/>
+<text x="379.0" y="806.0" font-size="13.5" fill="#5b5bc0" font-weight="700" text-anchor="start" >S24</text>
+<text x="379.0" y="825.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Document Generation</text>
+<text x="379.0" y="837.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >генерация документов</text>
+<rect x="358.0" y="850.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#5b5bc0" stroke-width="1.2" />
+<rect x="367.0" y="862.0" width="3.6" height="34" rx="1.8" fill="#5b5bc0"/>
+<text x="379.0" y="874.0" font-size="13.5" fill="#5b5bc0" font-weight="700" text-anchor="start" >S25</text>
+<text x="379.0" y="893.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >E-Signature</text>
+<text x="379.0" y="905.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >ЭП / УКЭП</text>
+<rect x="640.0" y="322.0" width="278.0" height="672.0" rx="15" fill="#fff7ea" stroke="#c98a2b" stroke-width="1.7" filter="url(#soft)"/>
+<circle cx="660" cy="344" r="5" fill="#c98a2b"/>
+<text x="673.0" y="349.0" font-size="14" fill="#c98a2b" font-weight="700" text-anchor="start" >ИИ / CV / Интеграции</text>
+<line x1="654" y1="374" x2="904" y2="374" stroke="#c98a2b" stroke-width="1" opacity="0.28"/>
+<rect x="658.0" y="408.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#c98a2b" stroke-width="1.2" />
+<rect x="667.0" y="420.0" width="3.6" height="34" rx="1.8" fill="#c98a2b"/>
+<text x="679.0" y="432.0" font-size="13.5" fill="#c98a2b" font-weight="700" text-anchor="start" >S18</text>
+<text x="679.0" y="451.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >CV Inspection</text>
+<text x="679.0" y="463.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >CV-анализ фото</text>
+<rect x="658.0" y="476.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#c98a2b" stroke-width="1.2" />
+<rect x="667.0" y="488.0" width="3.6" height="34" rx="1.8" fill="#c98a2b"/>
+<text x="679.0" y="500.0" font-size="13.5" fill="#c98a2b" font-weight="700" text-anchor="start" >S19</text>
+<text x="679.0" y="519.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Document Recognition</text>
+<text x="679.0" y="531.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >OCR документов</text>
+<rect x="658.0" y="544.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#c98a2b" stroke-width="1.2" />
+<rect x="667.0" y="556.0" width="3.6" height="34" rx="1.8" fill="#c98a2b"/>
+<text x="679.0" y="568.0" font-size="13.5" fill="#c98a2b" font-weight="700" text-anchor="start" >S20</text>
+<text x="679.0" y="587.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >AI Expert Orchestrator</text>
+<text x="679.0" y="599.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >ИИ-оркестратор</text>
+<rect x="658.0" y="612.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#c98a2b" stroke-width="1.2" />
+<rect x="667.0" y="624.0" width="3.6" height="34" rx="1.8" fill="#c98a2b"/>
+<text x="679.0" y="636.0" font-size="13.5" fill="#c98a2b" font-weight="700" text-anchor="start" >S21</text>
+<text x="679.0" y="655.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Knowledge &amp; Retrieval</text>
+<text x="679.0" y="667.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >база знаний / RAG</text>
+<rect x="658.0" y="680.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#c98a2b" stroke-width="1.2" />
+<rect x="667.0" y="692.0" width="3.6" height="34" rx="1.8" fill="#c98a2b"/>
+<text x="679.0" y="704.0" font-size="13.5" fill="#c98a2b" font-weight="700" text-anchor="start" >S22</text>
+<text x="679.0" y="723.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Model Registry &amp; Serving</text>
+<text x="679.0" y="735.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >реестр / сервинг моделей</text>
+<rect x="658.0" y="748.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#c98a2b" stroke-width="1.2" />
+<rect x="667.0" y="760.0" width="3.6" height="34" rx="1.8" fill="#c98a2b"/>
+<text x="679.0" y="772.0" font-size="13.5" fill="#c98a2b" font-weight="700" text-anchor="start" >S23</text>
+<text x="679.0" y="791.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >AI Guardrails &amp; PII</text>
+<text x="679.0" y="803.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >guardrails / PII</text>
+<rect x="658.0" y="816.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#c98a2b" stroke-width="1.2" />
+<rect x="667.0" y="828.0" width="3.6" height="34" rx="1.8" fill="#c98a2b"/>
+<text x="679.0" y="840.0" font-size="13.5" fill="#c98a2b" font-weight="700" text-anchor="start" >S26</text>
+<text x="679.0" y="859.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Integration Hub</text>
+<text x="679.0" y="871.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >интеграции</text>
+<rect x="658.0" y="884.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#c98a2b" stroke-width="1.2" />
+<rect x="667.0" y="896.0" width="3.6" height="34" rx="1.8" fill="#c98a2b"/>
+<text x="679.0" y="908.0" font-size="13.5" fill="#c98a2b" font-weight="700" text-anchor="start" >S27</text>
+<text x="679.0" y="927.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Inspection &amp; Offline Sync</text>
+<text x="679.0" y="939.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >осмотр / offline-sync</text>
+<rect x="940.0" y="322.0" width="278.0" height="672.0" rx="15" fill="#f5f5f5" stroke="#8a8a8a" stroke-width="1.7" filter="url(#soft)"/>
+<circle cx="960" cy="344" r="5" fill="#8a8a8a"/>
+<text x="973.0" y="349.0" font-size="14" fill="#8a8a8a" font-weight="700" text-anchor="start" >Общие сервисы</text>
+<line x1="954" y1="374" x2="1204" y2="374" stroke="#8a8a8a" stroke-width="1" opacity="0.28"/>
+<rect x="958.0" y="374.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="386.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="398.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S02</text>
+<text x="979.0" y="417.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >IAM / Identity</text>
+<rect x="958.0" y="442.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="454.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="466.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S05</text>
+<text x="979.0" y="485.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Workflow / Process</text>
+<rect x="958.0" y="510.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="522.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="534.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S14</text>
+<text x="979.0" y="553.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Audit Log</text>
+<text x="979.0" y="565.0" font-size="10.5" fill="#9aa3ae" font-weight="400" text-anchor="start" >hash-chain</text>
+<rect x="958.0" y="578.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="590.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="602.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S15</text>
+<text x="979.0" y="621.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Media / File Storage</text>
+<rect x="958.0" y="646.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="658.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="670.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S28</text>
+<text x="979.0" y="689.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Notifications</text>
+<rect x="958.0" y="714.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="726.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="738.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S29</text>
+<text x="979.0" y="757.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Metering &amp; Billing</text>
+<rect x="958.0" y="782.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="794.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="806.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S30</text>
+<text x="979.0" y="825.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Public Data API</text>
+<rect x="958.0" y="850.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="862.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="874.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S31</text>
+<text x="979.0" y="893.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Search</text>
+<rect x="958.0" y="918.0" width="242.0" height="58.0" rx="9" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2" />
+<rect x="967.0" y="930.0" width="3.6" height="34" rx="1.8" fill="#8a8a8a"/>
+<text x="979.0" y="942.0" font-size="13.5" fill="#8a8a8a" font-weight="700" text-anchor="start" >S32</text>
+<text x="979.0" y="961.0" font-size="12" fill="#2f3742" font-weight="600" text-anchor="start" >Analytics / OLAP</text>
+<rect x="40.0" y="1056.0" width="1180.0" height="122.0" rx="15" fill="#f7eefc" stroke="#8a5bb4" stroke-width="1.7" filter="url(#soft)"/>
+<circle cx="60" cy="1078" r="5" fill="#8a5bb4"/>
+<text x="73.0" y="1083.0" font-size="14" fill="#8a5bb4" font-weight="700" text-anchor="start" >Хранилища и шина</text>
+<rect x="66.0" y="1094.0" width="744.5" height="72.0" rx="10" fill="#ffffff" stroke="#8a5bb4" stroke-width="1.2" />
+<text x="82.0" y="1118.0" font-size="11.5" fill="#8a5bb4" font-weight="700" text-anchor="start" >Хранилища</text>
+<text x="82.0" y="1138.0" font-size="10.5" fill="#374151" font-weight="400" text-anchor="start" >PostgreSQL (+PostGIS, pgvector) · MongoDB · ClickHouse</text>
+<text x="82.0" y="1153.0" font-size="10.5" fill="#374151" font-weight="400" text-anchor="start" >InfluxDB · Redis/Valkey · MinIO/S3 · OpenSearch · Vector DB</text>
+<rect x="828.5" y="1094.0" width="365.5" height="72.0" rx="10" fill="#ffffff" stroke="#8a5bb4" stroke-width="1.2" />
+<text x="844.5" y="1118.0" font-size="11.5" fill="#8a5bb4" font-weight="700" text-anchor="start" >Шина</text>
+<text x="844.5" y="1138.0" font-size="10" fill="#374151" font-weight="400" text-anchor="start" >RabbitMQ (tasks/events) +</text>
+<text x="844.5" y="1152.0" font-size="10" fill="#374151" font-weight="400" text-anchor="start" >append-only журнал (Kafka/Streams)</text>
+<line x1="630.0" y1="234.0" x2="179.0" y2="320.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="630.0" y1="234.0" x2="479.0" y2="320.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="630.0" y1="234.0" x2="779.0" y2="320.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="630.0" y1="234.0" x2="1079.0" y2="320.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="179.0" y1="994.0" x2="630.0" y2="1054.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="479.0" y1="994.0" x2="630.0" y2="1054.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="779.0" y1="994.0" x2="630.0" y2="1054.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="1079.0" y1="994.0" x2="630.0" y2="1054.0" stroke="#7b879e" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="824.0" y="226.0" font-size="11" fill="#9aa3ae" font-weight="700" text-anchor="start" >fan-out</text>
+<text x="824.0" y="1048.0" font-size="11" fill="#9aa3ae" font-weight="700" text-anchor="start" >fan-in</text>
+</svg>

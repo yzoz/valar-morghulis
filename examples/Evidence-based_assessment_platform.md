@@ -149,79 +149,12 @@
 ## 4. Целевая топология (обзор)
 
 Слои по контурам доверия (сверху вниз: клиенты → шлюз → контуры сервисов → данные/шина).
-Узлы `Sxx` снабжены ссылками на строки каталога в разделе 5:
+Шлюз раздаёт трафик «веером» во все четыре контура (fan-out), контуры так же сходятся
+к слою данных и шины (fan-in). Каталог сервисов `Sxx` — в разделе 5.
 
-```mermaid
-%%{init: {"securityLevel": "loose"}}%%
-flowchart TB
-    classDef client fill:#e8eefc,stroke:#5b7bb4,color:#1b2a44
-    classDef edge fill:#fde8e8,stroke:#c0504d,color:#5a1a1a
-    classDef core fill:#e8f5e9,stroke:#5a9e5a,color:#1e3a1e
-    classDef calc fill:#e8e9fd,stroke:#5b5bc0,color:#1e1e4a
-    classDef ai fill:#fff3e0,stroke:#c98a2b,color:#5a3d10
-    classDef common fill:#f0f0f0,stroke:#8a8a8a,color:#333333
-    classDef store fill:#f3e8ff,stroke:#8a5bb4,color:#3a1a5a
+![Целевая топология](img/evidence_topology.svg)
 
-    C["Клиенты: React SPA · PWA осмотра (offline) · внешние API-клиенты"]:::client
-    S01["<a href="#s01">S01 API Gateway / BFF<br/>JWT · rate-limit · tenant routing</a>"]:::edge
-
-    subgraph DOMAIN["Ядро домена (system of record)"]
-      S03["<a href="#s03">S03 Tenant & Org<br/>тенанты / орг</a>"]:::core
-      S04["<a href="#s04">S04 Engagement<br/>заявки</a>"]:::core
-      S06["<a href="#s06">S06 Object Registry<br/>объекты</a>"]:::core
-      S07["<a href="#s07">S07 Methodology Registry<br/>методики</a>"]:::core
-      S08["<a href="#s08">S08 References / Normative<br/>справочники</a>"]:::core
-      S09["<a href="#s09">S09 Commission<br/>комиссия</a>"]:::core
-      S10["<a href="#s10">S10 DTP Cases<br/>ДТП</a>"]:::core
-    end
-
-    subgraph CALC["Вычисления / контроль"]
-      S16["<a href="#s16">S16 Calculation Core<br/>Rust, gRPC</a>"]:::calc
-      S17["<a href="#s17">S17 QA / Autoexpertise<br/>автоэкспертиза</a>"]:::calc
-      S11["<a href="#s11">S11 Market Data<br/>рыночные данные</a>"]:::calc
-      S12["<a href="#s12">S12 Source Archive<br/>WORM</a>"]:::calc
-      S13["<a href="#s13">S13 Provenance<br/>доказательства</a>"]:::calc
-      S24["<a href="#s24">S24 Document Generation<br/>генерация документов</a>"]:::calc
-      S25["<a href="#s25">S25 E-Signature<br/>ЭП / УКЭП</a>"]:::calc
-    end
-
-    subgraph AICV["ИИ / CV / Интеграции"]
-      S18["<a href="#s18">S18 CV Inspection<br/>CV-анализ фото</a>"]:::ai
-      S19["<a href="#s19">S19 Document Recognition<br/>OCR документов</a>"]:::ai
-      S20["<a href="#s20">S20 AI Expert Orchestrator<br/>ИИ-оркестратор</a>"]:::ai
-      S21["<a href="#s21">S21 Knowledge & Retrieval<br/>база знаний / RAG</a>"]:::ai
-      S22["<a href="#s22">S22 Model Registry & Serving<br/>реестр / сервинг моделей</a>"]:::ai
-      S23["<a href="#s23">S23 AI Guardrails & PII<br/>guardrails / PII</a>"]:::ai
-      S26["<a href="#s26">S26 Integration Hub<br/>интеграции</a>"]:::ai
-      S27["<a href="#s27">S27 Inspection & Offline Sync<br/>осмотр / offline-sync</a>"]:::ai
-    end
-
-    subgraph COMMON["Общие сервисы"]
-      S02["<a href="#s02">S02 IAM / Identity</a>"]:::common
-      S05["<a href="#s05">S05 Workflow / Process</a>"]:::common
-      S14["<a href="#s14">S14 Audit Log<br/>hash-chain</a>"]:::common
-      S15["<a href="#s15">S15 Media / File Storage</a>"]:::common
-      S28["<a href="#s28">S28 Notifications</a>"]:::common
-      S29["<a href="#s29">S29 Metering & Billing</a>"]:::common
-      S30["<a href="#s30">S30 Public Data API</a>"]:::common
-      S31["<a href="#s31">S31 Search</a>"]:::common
-      S32["<a href="#s32">S32 Analytics / OLAP</a>"]:::common
-    end
-
-    subgraph DATA["Хранилища и шина"]
-      STORE["Хранилища: PostgreSQL (+PostGIS, pgvector) · MongoDB · ClickHouse · InfluxDB · Redis/Valkey · MinIO/S3 · OpenSearch · Vector DB"]:::store
-      BUS["Шина: RabbitMQ (tasks/events) + append-only журнал событий (Kafka/Streams)"]:::store
-    end
-
-    C --> S01
-    S01 --> DOMAIN
-    DOMAIN --> CALC
-    CALC --> AICV
-    AICV --> COMMON
-    COMMON --> STORE
-    COMMON --> BUS
-
-```
+<sub>Схема построена скриптом `examples/evidence_topology.py` (SVG без внешних зависимостей).</sub>
 
 >
 > - **Контур «Периметр и доступ» (5.1):** [S01](#s01) · [S02](#s02) · [S03](#s03)
