@@ -1,0 +1,8 @@
+Host host
+    HostName 0.0.0.0
+    User root
+    Port 8080
+    IdentityFile ~/.ssh/sec.ppk
+    ProxyCommand proxytunnel -p 127.0.0.1:2080 -d %h:%p
+
+# https://github.com/proxytunnel/proxytunnel

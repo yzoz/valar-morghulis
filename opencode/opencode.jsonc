@@ -1,0 +1,74 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "providers": {
+    "selectel-router": {
+      "name": "Selectel Router",
+      "package": "@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "https://api.selectel.ru/aig/v1",
+        "apiKey": ""
+      },
+      "models": {
+        "deepseek/deepseek-v4.1-flash": {
+          "name": "deepseek-v4.1-flash",
+          "limit": { "context": 1048576, "output": 32768 },
+          "cost": { "input": 11.25, "output": 22.51, "cache_read": 2.25, "cache_write": 0}
+        },
+        "anthropic/claude-haiku-5.5": {
+          "name": "claude-haiku-5.5",
+          "limit": { "context": 1000000, "output": 32768 },
+          "cost": { "input": 12.5, "output": 62.52, "cache_read": 1.25, "cache_write": 15.63 }
+        },
+        "openai/gpt-6-luna": {
+          "name": "gpt-6-luna",
+          "limit": { "context": 1050000, "output": 32768 },
+          "cost": { "input": 12.5, "output": 62.52, "cache_read": 1.25, "cache_write": 15.63 }
+        },
+        "xiaomi/mimo-v2.6-pro": {
+          "name": "mimo-v2.6-pro",
+          "limit": { "context": 1050000, "output": 32768 },
+          "cost": { "input": 53.77, "output": 108.79, "cache_read": 0.45, "cache_write": 0 }
+        },
+        "z-ai/glm-5.3-flash": {
+          "name": "glm-5.3-flash",
+          "limit": { "context": 1048576, "output": 32768 },
+          "cost": { "input": 9.38, "output": 31.26, "cache_read": 1.88, "cache_write": 0 }
+        },
+        "qwen/qwen3.8-flash": {
+          "name": "qwen3.8-flash",
+          "limit": { "context": 1000000, "output": 32768 },
+          "cost": { "input": 18.76, "output": 58.77, "cache_read": 2.00, "cache_write": 25.01 }
+        },
+        "openai/gpt-6-luna-pro": {
+          "name": "gpt-6-luna-pro",
+          "limit": { "context": 1050000, "output": 32768 },
+          "cost": { "input": 12.5, "output": 62.52, "cache_read": 1.25, "cache_write": 15.63 }
+        },
+        "google/gemini-3.5-flash-lite": {
+          "name": "gemini-3.5-flash-lite",
+          "limit": { "context": 1048576, "output": 32768 },
+          "cost": { "input":37.51, "output": 312.61, "cache_read": 3.75, "cache_write": 10.42 }
+        },
+        "inclusionai/ling-3.0-flash": {
+          "name": "ling-3.0-flash",
+          "limit": { "context": 262144, "output": 7692 }
+        },
+        "bytedance-seed/seed-2.0-mini": {
+          "name": "seed-2.0-mini",
+          "limit": { "context": 262144, "output": 32768 }
+        },
+        "amazon/nova-micro-v1": {
+          "name": "nova-micro-v1",
+          "limit": { "context": 128000, "output": 5120 }
+        }
+      }
+    }
+  },
+  "plugins": [
+    "open-codebase-index", // https://github.com/Tarquinen/opencode-dynamic-context-pruning + https://unsloth.ai/docs/models/embeddinggemma-2#run-embeddinggemma-2-ggufs-in-llama.cpp
+    "@tarquinen/opencode-dcp@latest", // https://github.com/Tarquinen/opencode-dynamic-context-pruning
+    "@dietrichgebert/ponytail" // https://github.com/DietrichGebert/ponytail
+  ],
+  "model": "selectel-router/deepseek-v4.1-flash",
+  "shell": "/bin/zsh"
+}
